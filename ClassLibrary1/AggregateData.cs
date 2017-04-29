@@ -54,9 +54,9 @@ namespace Aggregator
             sb.AppendLine("<ol>");
             foreach (var car in aggregate)
             {
-                const string template = "<li><div><a Href='{3}'>{0} ([{4} days] - R {1})</a> <span class=\"sparklines\">{2}</span></div></li>";
+                const string template = "<li><div><a Href='{3}'>{0} ([{4} days] R {5} to R {1})</a> <span class=\"sparklines\">{2}</span></div></li>";
                 var link = string.IsNullOrWhiteSpace(car.Value.Link) ? "http://www.wesellcars.co.za" : car.Value.Link;
-                sb.AppendLine(string.Format(template, car.Value.LineItem.Description, car.Value.Prices.Last().Value, string.Join(",", car.Value.Prices.Select(c => c.Value)), link, car.Value.Age));
+                sb.AppendLine(string.Format(template, car.Value.LineItem.Description, car.Value.Prices.Last().Value, string.Join(",", car.Value.Prices.Select(c => c.Value)), link, car.Value.Age, car.Value.Prices.First().Value));
             }
             sb.AppendLine("</ol>");
             sb.AppendLine("<script type=\"text/javascript\"> $('.sparklines').sparkline('html'); </script>");
