@@ -27,8 +27,8 @@ namespace GetGumtree
                 chromeOptions.AddArguments("-incognito");
                 using (IWebDriver driver = new ChromeDriver(Path.Combine(Directory.GetCurrentDirectory(), "WebDriverServer"), chromeOptions))
                 {
-                    driver.Navigate().GoToUrl("http://www.wesellcars.co.za/vehicle/category/all");
-                    var findElement = driver.FindElements(By.CssSelector("#main_content > div > div.vehicles.grid > div.item"));
+                    driver.Navigate().GoToUrl("http://www.wesellcars.co.za/");
+                    var findElement = driver.FindElements(By.CssSelector("#feed_1 > div > div.vehicles.grid > div.item"));
 
                     foreach (var item in findElement)
                     {

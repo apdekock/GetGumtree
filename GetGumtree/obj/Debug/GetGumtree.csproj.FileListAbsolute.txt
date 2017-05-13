@@ -95,7 +95,6 @@ C:\git\GetGumtree\GetGumtree\bin\Debug\git.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\GitSharp.Core.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\GitSharp.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\Selenium.WebDriverBackedSelenium.dll
-C:\git\GetGumtree\GetGumtree\bin\Debug\System.Web.Http.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\ThoughtWorks.Selenium.Core.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\WebDriver.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\WebDriver.Support.dll
