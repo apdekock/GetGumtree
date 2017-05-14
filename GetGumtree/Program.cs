@@ -132,7 +132,7 @@ namespace GetGumtree
             }
         }
 
-        private static async System.Threading.Tasks.Task sendNotification(string message, int level, string secret)
+        private static void sendNotification(string message, int level, string secret)
         {
             var values = new Dictionary<string, string>
             {
@@ -143,9 +143,7 @@ namespace GetGumtree
 
             var content = new FormUrlEncodedContent(values);
 
-            var response = await client.PostAsync("https://api.pushjet.io/message", content);
-
-            var responseString = await response.Content.ReadAsStringAsync();
+            var response = client.PostAsync("https://api.pushjet.io/message", content).Result;
         }
     }
 }
