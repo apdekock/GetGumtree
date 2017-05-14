@@ -127,7 +127,7 @@ namespace GetGumtree
             }
             catch (Exception e)
             {
-                sendNotification(e.Message, 5, args[4]);
+                sendNotification(string.Format("Scraper exception: {0}",e.Message), 5, args[4]);
                 Console.WriteLine(e.Message);
             }
         }
