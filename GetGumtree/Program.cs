@@ -23,6 +23,7 @@ namespace GetGumtree
             //var arg2 = @"_posts\2015-08-04-weMineData.markdown"; //post path
             //var arg3 = @"C:\Program Files\Git\cmd\git.exe"; //git path
             //var arg4 = @secrect key push notfications            
+            //var arg5 = @"http://www.wesellcars.co.za/vehicle/category/all"      
             try
             {
                 StringBuilder listOfLines = new StringBuilder();
@@ -30,7 +31,7 @@ namespace GetGumtree
                 chromeOptions.AddArguments("-incognito");
                 using (IWebDriver driver = new ChromeDriver(Path.Combine(Directory.GetCurrentDirectory(), "WebDriverServer"), chromeOptions))
                 {
-                    driver.Navigate().GoToUrl("http://www.wesellcars.co.za/");
+                    driver.Navigate().GoToUrl(args[5]);
                     var findElement = driver.FindElements(By.CssSelector("#feed_1 > div > div.vehicles.grid > div.item"));
 
                     foreach (var item in findElement)
