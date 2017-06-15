@@ -30,10 +30,10 @@ C:\git\apdekock.github.io\UpdateWindowsService\GetGumtree\bin\Release\WebDriver.
 C:\git\apdekock.github.io\UpdateWindowsService\GetGumtree\bin\Release\WebDriver.Support.xml
 C:\git\apdekock.github.io\UpdateWindowsService\GetGumtree\bin\Release\System.Net.Http.Formatting.xml
 C:\git\apdekock.github.io\UpdateWindowsService\GetGumtree\obj\Release\GetGumtree.csprojResolveAssemblyReference.cache
-C:\git\GetGumtree\GetGumtree\bin\Release\GetGumtree.exe.config
 C:\git\GetGumtree\GetGumtree\bin\Release\Resources\Commands.xml
 C:\git\GetGumtree\GetGumtree\bin\Release\WebDriverServer\chromedriver.exe
 C:\git\GetGumtree\GetGumtree\bin\Release\WebDriverServer\IEDriverServer.exe
+C:\git\GetGumtree\GetGumtree\bin\Release\GetGumtree.exe.config
 C:\git\GetGumtree\GetGumtree\bin\Release\GetGumtree.exe
 C:\git\GetGumtree\GetGumtree\bin\Release\GetGumtree.pdb
 C:\git\GetGumtree\GetGumtree\bin\Release\Aggregator.dll
