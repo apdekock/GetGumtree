@@ -13,5 +13,6 @@ C:\git\apdekock.github.io\UpdateWindowsService\GitSharp.Core\obj\Release\GitShar
 C:\git\apdekock.github.io\UpdateWindowsService\GitSharp.Core\obj\Release\GitSharp.Core.pdb
 C:\git\GetGumtree\GitSharp.Core\bin\Release\GitSharp.Core.dll
 C:\git\GetGumtree\GitSharp.Core\bin\Release\GitSharp.Core.pdb
+C:\git\GetGumtree\GitSharp.Core\obj\Release\GitSharp.Core.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\GitSharp.Core\obj\Release\GitSharp.Core.dll
 C:\git\GetGumtree\GitSharp.Core\obj\Release\GitSharp.Core.pdb

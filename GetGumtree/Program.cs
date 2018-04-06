@@ -32,7 +32,7 @@ namespace GetGumtree
                 using (IWebDriver driver = new ChromeDriver(Path.Combine(Directory.GetCurrentDirectory(), "WebDriverServer"), chromeOptions))
                 {
                     driver.Navigate().GoToUrl(args[5]);
-                    var findElement = driver.FindElements(By.CssSelector("#main_content > div > div.vehicles.grid > div.item"));
+                    var findElement = driver.FindElements(By.CssSelector("#feed_1 > div > div.vehicles.grid > div.item"));
 
                     foreach (var item in findElement)
                     {
