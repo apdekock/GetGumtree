@@ -12,3 +12,4 @@ C:\git\GetGumtree\ClassLibrary1\bin\Debug\Winterdom.IO.FileMap.dll
 C:\git\GetGumtree\ClassLibrary1\obj\Debug\AggregateData.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\ClassLibrary1\obj\Debug\Aggregator.dll
 C:\git\GetGumtree\ClassLibrary1\obj\Debug\Aggregator.pdb
+C:\git\GetGumtree\ClassLibrary1\obj\Debug\AggregateData.csproj.CoreCompileInputs.cache
