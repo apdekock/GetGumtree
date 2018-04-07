@@ -49,3 +49,4 @@ C:\git\GetGumtree\Git\bin\Debug\GitSharp.Core.xml
 C:\git\GetGumtree\Git\obj\Debug\Git.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\Git\obj\Debug\git.dll
 C:\git\GetGumtree\Git\obj\Debug\git.pdb
+C:\git\GetGumtree\Git\obj\Debug\Git.csproj.CoreCompileInputs.cache
