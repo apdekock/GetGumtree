@@ -20,6 +20,7 @@ namespace GetGumtree
     {
         private static readonly HttpClient client = new HttpClient();
 
+        private static string secretKeyPushNotification = string.Empty;
         private static void Main(string[] args)
         {
             //var arg0 = @"C:\temp\Dropbox\jnk\WeSellCars\"; // file path
@@ -27,14 +28,16 @@ namespace GetGumtree
             //var arg2 = @"_posts\2015-08-04-weMineData.markdown"; //post path
             //var arg3 = @"C:\Program Files\Git\cmd\git.exe"; //git path
             //var arg4 = @secrect key push notfications            
-            //var arg5 = @"http://www.wesellcars.co.za/vehicle/category/all"      
+            //var arg5 = @"http://www.wesellcars.co.za/vehicle/category/all"    
+
+            secretKeyPushNotification = args[4];
             try
             {
                 var chromeOptions = new ChromeOptions();
                 chromeOptions.AddArguments("-incognito");
                 chromeOptions.AddUserProfilePreference("profile.default_content_setting_values.images", 2);
 
-                using (IWebDriver driver = new ChromeDriver(Path.Combine(Directory.GetCurrentDirectory(), "WebDriverServer"), chromeOptions))
+                using (IWebDriver driver = new ChromeDriver(args[0], chromeOptions))
                 {
                     driver.Navigate().GoToUrl(args[5]);
 
@@ -55,8 +58,7 @@ namespace GetGumtree
                                     }).Execute(() =>
                                         {
                                             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-                                            wait.Until(driver1 => (ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.ClassName("Loader"))));
-                                            wait.Until(driver1 => (ExpectedConditions.InvisibilityOfElementLocated(By.ClassName("Loader"))));
+                                            wait.Until(driver1 => { Thread.Sleep(1000); return true; });
                                             List<ScrapeItem> collection = ScrapePage(args, driver);
                                             if (collection.Count == 0) { throw new StaleElementReferenceException("empty collection"); }
                                             scrapedItems.AddRange(collection);
@@ -74,9 +76,9 @@ namespace GetGumtree
                                         }).Execute(() =>
                                             {
                                                 driver.FindElements(By.CssSelector(".ListNavigation_Next")).First().Click();
+
                                                 var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-                                                wait.Until(driver1 => (ExpectedConditions.VisibilityOfAllElementsLocatedBy(By.ClassName("Loader"))));
-                                                wait.Until(driver1 => (ExpectedConditions.InvisibilityOfElementLocated(By.ClassName("Loader"))));
+                                                wait.Until(driver1 => { Thread.Sleep(3000); return true; });
                                             });
                             }
                         }
@@ -87,15 +89,15 @@ namespace GetGumtree
                         Console.WriteLine(string.Format("Items scraped: {0}", scrapedItems.Count));
                     }
 
-                    //var dataAccess = new DataAccess(log);
-                    //var saveResult = dataAccess.SaveItems(items);
-                    sendNotification(string.Format("Scraped: {0} items from WeSellCars.", scrapedItems.Count), 1, args[4]);
+                    var dataAccess = new DataAccess.DataAccess();
+                    var saveResult = dataAccess.SaveItems(scrapedItems);
+                    sendNotification(string.Format("Scraped: {0} items from WeSellCars.", scrapedItems.Count), 1);
                     driver.Quit();
                 }
             }
             catch (Exception e)
             {
-                sendNotification(string.Format("Scraper exception: {0}", e.Message), 5, args[4]);
+                sendNotification(string.Format("Scraper exception: {0}", e.Message), 5);
                 Console.WriteLine(e.Message);
             }
         }
@@ -117,7 +119,7 @@ namespace GetGumtree
                 var Mileage = string.Empty;
 
                 var values = item.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-
+                var link = item.FindElement(By.CssSelector("img")).GetAttribute("src");
                 title = values.First();
 
                 foreach (var value in values)
@@ -143,7 +145,7 @@ namespace GetGumtree
 
                 try
                 {
-                    var scrapedItem = new ScrapeItem(title, new Uri(args[5]), Year, Price, Mileage, Branch);
+                    var scrapedItem = new ScrapeItem(title, new Uri(link), Year, Price, Mileage, Branch);
                     scrapedItems.Add(scrapedItem);
                 }
                 catch (Exception e)
@@ -155,7 +157,11 @@ namespace GetGumtree
             return scrapedItems;
         }
 
-        private static void sendNotification(string message, int level, string secret)
+        public static void sendNotification(string message, int level)
+        {
+            sendNotification(message, level, secretKeyPushNotification);
+        }
+        public static void sendNotification(string message, int level, string secret)
         {
             var values = new Dictionary<string, string>
             {

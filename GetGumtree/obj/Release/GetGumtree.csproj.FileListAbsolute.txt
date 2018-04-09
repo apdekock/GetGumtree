@@ -57,3 +57,7 @@ C:\git\GetGumtree\GetGumtree\bin\Release\WebDriver.Support.xml
 C:\git\GetGumtree\GetGumtree\obj\Release\GetGumtree.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\GetGumtree\obj\Release\GetGumtree.exe
 C:\git\GetGumtree\GetGumtree\obj\Release\GetGumtree.pdb
+C:\git\GetGumtree\GetGumtree\bin\Release\Polly.dll
+C:\git\GetGumtree\GetGumtree\bin\Release\Polly.pdb
+C:\git\GetGumtree\GetGumtree\bin\Release\Polly.xml
+C:\git\GetGumtree\GetGumtree\obj\Release\GetGumtree.csproj.CoreCompileInputs.cache

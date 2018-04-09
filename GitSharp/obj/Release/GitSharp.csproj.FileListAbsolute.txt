@@ -13,3 +13,4 @@ C:\git\GetGumtree\build\mono-2.0-release\bin\GitSharp.pdb
 C:\git\GetGumtree\GitSharp\obj\Release\GitSharp.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\GitSharp\obj\Release\GitSharp.dll
 C:\git\GetGumtree\GitSharp\obj\Release\GitSharp.pdb
+C:\git\GetGumtree\GitSharp\obj\Release\GitSharp.csproj.CoreCompileInputs.cache

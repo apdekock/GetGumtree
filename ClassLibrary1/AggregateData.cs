@@ -153,6 +153,7 @@ namespace Aggregator
 
     public class LineItem
     {
+        public LineItem() { }
         public LineItem(string lineContent)
         {
             var lastFiledSeperator = lineContent.LastIndexOf(',');

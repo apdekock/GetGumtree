@@ -37,3 +37,4 @@ C:\git\GetGumtree\Git\bin\Release\GitSharp.Core.pdb
 C:\git\GetGumtree\Git\obj\Release\Git.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\Git\obj\Release\git.dll
 C:\git\GetGumtree\Git\obj\Release\git.pdb
+C:\git\GetGumtree\Git\obj\Release\Git.csproj.CoreCompileInputs.cache

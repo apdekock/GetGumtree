@@ -100,8 +100,6 @@ C:\git\GetGumtree\GetGumtree\bin\Debug\WebDriver.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\WebDriver.Support.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\ICSharpCode.SharpZipLib.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\Tamir.SharpSSH.dll
-C:\git\GetGumtree\GetGumtree\bin\Debug\System.Net.Http.Formatting.dll
-C:\git\GetGumtree\GetGumtree\bin\Debug\Newtonsoft.Json.dll
 C:\git\GetGumtree\GetGumtree\bin\Debug\Aggregator.pdb
 C:\git\GetGumtree\GetGumtree\bin\Debug\GitSharp.Core.pdb
 C:\git\GetGumtree\GetGumtree\bin\Debug\GitSharp.Core.xml
@@ -110,11 +108,9 @@ C:\git\GetGumtree\GetGumtree\bin\Debug\GitSharp.xml
 C:\git\GetGumtree\GetGumtree\bin\Debug\git.pdb
 C:\git\GetGumtree\GetGumtree\bin\Debug\git.xml
 C:\git\GetGumtree\GetGumtree\bin\Debug\Selenium.WebDriverBackedSelenium.xml
-C:\git\GetGumtree\GetGumtree\bin\Debug\System.Web.Http.xml
 C:\git\GetGumtree\GetGumtree\bin\Debug\ThoughtWorks.Selenium.Core.xml
 C:\git\GetGumtree\GetGumtree\bin\Debug\WebDriver.xml
 C:\git\GetGumtree\GetGumtree\bin\Debug\WebDriver.Support.xml
-C:\git\GetGumtree\GetGumtree\bin\Debug\System.Net.Http.Formatting.xml
 C:\git\GetGumtree\GetGumtree\obj\Debug\GetGumtree.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\GetGumtree\obj\Debug\GetGumtree.exe
 C:\git\GetGumtree\GetGumtree\obj\Debug\GetGumtree.pdb
