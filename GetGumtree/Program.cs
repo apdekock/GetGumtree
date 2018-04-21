@@ -35,6 +35,8 @@ namespace GetGumtree
             {
                 var chromeOptions = new ChromeOptions();
                 chromeOptions.AddArguments("-incognito");
+                chromeOptions.AddArguments("--start-fullscreen");
+                chromeOptions.AddArguments("--kiosk");
                 chromeOptions.AddUserProfilePreference("profile.default_content_setting_values.images", 2);
 
                 using (IWebDriver driver = new ChromeDriver(args[0], chromeOptions))
@@ -73,13 +75,16 @@ namespace GetGumtree
                                         , (exception, timeSpan, retryAttempt) =>
                                         {
                                             Console.WriteLine("On " + timeSpan + ": " + exception.Message);
+                                            driver.FindElements(By.CssSelector(".ListNavigation_Next")).First().SendKeys(Keys.PageDown);
                                         }).Execute(() =>
-                                            {
-                                                driver.FindElements(By.CssSelector(".ListNavigation_Next")).First().Click();
+                                        {
+                                            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+                                            wait.Until(driver1 => { Thread.Sleep(3000); return true; });
+                                            driver.FindElements(By.CssSelector(".ListNavigation_Next")).First().Click();
+                                            wait.Until(driver1 => { Thread.Sleep(3000); return true; });
 
-                                                var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
-                                                wait.Until(driver1 => { Thread.Sleep(3000); return true; });
-                                            });
+
+                                        });
                             }
                         }
                         catch (Exception e)
@@ -106,8 +111,8 @@ namespace GetGumtree
         private static List<ScrapeItem> ScrapePage(string[] args, IWebDriver driver)
         {
             var scrapedItems = new List<ScrapeItem>();
-
-            var findElementWrapper = driver.FindElements(By.CssSelector(".GalleryWrapper")).Last();
+            
+            var findElementWrapper = driver.FindElements(By.CssSelector(".Gallery")).Skip(3).First();
             var findElements = findElementWrapper.FindElements(By.CssSelector(".GalleryItem"));
 
             foreach (var item in findElements)

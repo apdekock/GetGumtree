@@ -32,12 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Polly, Version=5.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Polly.5.8.0\lib\net45\Polly.dll</HintPath>
+    <Reference Include="Polly, Version=5.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Polly.5.9.0\lib\net45\Polly.dll</HintPath>
     </Reference>
-    <Reference Include="Selenium.WebDriverBackedSelenium">
-      <HintPath>..\packages\Selenium.WebDriverBackedSelenium.3.4.0\lib\net40\Selenium.WebDriverBackedSelenium.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Selenium.WebDriverBackedSelenium, Version=3.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriverBackedSelenium.3.11.2\lib\net45\Selenium.WebDriverBackedSelenium.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,13 +52,11 @@
       <HintPath>..\packages\Selenium.RC.3.1.0\lib\net40\ThoughtWorks.Selenium.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebDriver">
-      <HintPath>..\packages\Selenium.WebDriver.3.4.0\lib\net40\WebDriver.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="WebDriver, Version=3.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.11.2\lib\net45\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support">
-      <HintPath>..\packages\Selenium.Support.3.4.0\lib\net40\WebDriver.Support.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="WebDriver.Support, Version=3.11.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.11.2\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
