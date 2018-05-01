@@ -30,6 +30,7 @@ namespace GetGumtree
             //var arg4 = @secrect key push notfications            
             //var arg5 = @"http://www.wesellcars.co.za/vehicle/category/all"    
 
+            int ZeroCount = 0;
             secretKeyPushNotification = args[4];
             try
             {
@@ -91,7 +92,16 @@ namespace GetGumtree
                         {
                             Console.WriteLine(e.Message);
                         }
+
                         Console.WriteLine(string.Format("Items scraped: {0}", scrapedItems.Count));
+                        if (scrapedItems.Count == 0)
+                        {
+                            ZeroCount++;
+                        }
+                        if (ZeroCount > 3)
+                        {
+                            throw new DivideByZeroException("ZeroCount Exceeded");
+                        }
                     }
 
                     var dataAccess = new DataAccess.DataAccess();
@@ -111,12 +121,12 @@ namespace GetGumtree
         private static List<ScrapeItem> ScrapePage(string[] args, IWebDriver driver)
         {
             var scrapedItems = new List<ScrapeItem>();
-            
-            var findElementWrapper = driver.FindElements(By.CssSelector(".Gallery")).Skip(3).First();
-            var findElements = findElementWrapper.FindElements(By.CssSelector(".GalleryItem"));
 
-            foreach (var item in findElements)
+            var vehicles = driver.FindElements(By.CssSelector(".vehicles"));
+
+            foreach (var item in vehicles)
             {
+
                 var title = string.Empty;
                 var Branch = string.Empty;
                 var Year = string.Empty;

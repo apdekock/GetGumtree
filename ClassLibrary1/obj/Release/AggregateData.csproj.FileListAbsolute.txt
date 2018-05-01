@@ -8,7 +8,6 @@ C:\git\GetGumtree\ClassLibrary1\bin\Release\Aggregator.dll
 C:\git\GetGumtree\ClassLibrary1\bin\Release\Aggregator.pdb
 C:\git\GetGumtree\ClassLibrary1\bin\Release\Tamir.SharpSSH.dll
 C:\git\GetGumtree\ClassLibrary1\bin\Release\Winterdom.IO.FileMap.dll
-C:\git\GetGumtree\ClassLibrary1\obj\Release\AggregateData.csprojResolveAssemblyReference.cache
 C:\git\GetGumtree\ClassLibrary1\obj\Release\Aggregator.dll
 C:\git\GetGumtree\ClassLibrary1\obj\Release\Aggregator.pdb
 C:\git\GetGumtree\ClassLibrary1\obj\Release\AggregateData.csproj.CoreCompileInputs.cache
